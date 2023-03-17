@@ -1,2 +1,2 @@
 # wake-up-neo
-NCurses
+#ncurses #C
