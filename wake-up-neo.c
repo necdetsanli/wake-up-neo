@@ -5,6 +5,7 @@
 int main(void)
 {
     initscr();
+    curs_set(0);
 
     char text1[] = "Wake up, Neo...";
     char text2[] = "The Matrix has you...";
@@ -22,7 +23,7 @@ int main(void)
     init_pair(1, COLOR_GREEN, COLOR_BLACK);
     attrset(COLOR_PAIR(1)| A_BLINK | A_BOLD);
 
-    move(2, 2);
+    move(3, 3);
     while (len--) {
         addch(*t++);
         refresh();
@@ -36,11 +37,11 @@ int main(void)
     len = strlen(text2);
     t = text2;
 
-    move(2,2);
+    move(3,3);
     while (len--) {
         addch(*t++);
         refresh();
-        napms(250);
+        napms(200);
     }
 
     napms(4000);
@@ -49,7 +50,7 @@ int main(void)
     len = strlen(text3);
     t = text3;
 
-    move(2, 2);
+    move(3, 3);
     while (len--) {
         addch(*t++);
         refresh();
@@ -62,7 +63,7 @@ int main(void)
     len = strlen(text4);
     t = text4;
 
-    move(2, 2);
+    move(3, 3);
     attroff(A_BLINK);
     addstr(text4);
     napms(3000);
